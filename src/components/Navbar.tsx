@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/LOGO.png';
-
+import bgImage from '../assets/LOGO.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -9,8 +8,11 @@ const Navbar = () => {
         <nav className="relative bg-card px-4 py-3 shadow-md flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-                <Link to="/portfolio/">
-                    <img src={logo} alt="Sedarius Art logo" className="h-16 w-auto" />
+                <Link to="/">
+                    <img  src={bgImage}
+                            alt="Sedarius Art logo"
+                            className="h-10 w-auto"
+                    />
                 </Link>
             </div>
 
@@ -40,35 +42,42 @@ const Navbar = () => {
             >
                 <div className="flex flex-col md:flex-row md:items-center md:space-x-16 text-center py-4 md:py-0">
                     <Link
-                        to="/portfolio/"
+                        to="/"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
                         Home
                     </Link>
                     <Link
-                        to="/portfolio/pricing"
+                        to="/pricing"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
                         Services
                     </Link>
                     <Link
-                        to="/portfolio/workflow"
+                        to="/workflow"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
                         Workflow
                     </Link>
                     <Link
-                        to="/portfolio/about"
+                        to="/about"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
                         About me
                     </Link>
+                    {/*<Link*/}
+                    {/*    to="/blog"*/}
+                    {/*    className="block px-4 py-2 hover:text-primary transition"*/}
+                    {/*    onClick={() => setIsOpen(false)}*/}
+                    {/*>*/}
+                    {/*    Blog*/}
+                    {/*</Link>*/}
                     <Link
-                        to="/portfolio/contact"
+                        to="/contact"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >

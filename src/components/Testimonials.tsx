@@ -1,0 +1,21 @@
+
+const items = [
+    { quote: "Fantastic detail work!", name: "Alex P." },
+    { quote: "My minis have never looked better.", name: "Jordan L." },
+];
+
+export default function Testimonials() {
+    return (
+        <div className="container my-12">
+            <h2 className="text-2xl font-semibold mb-4">What Clients Say</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+                {items.map((t, i) => (
+                    <blockquote key={i} className="p-4 bg-gray-100 rounded-lg">
+                        <p className="text-black">"{t.quote}"</p>
+                        <footer className="mt-2 text-right text-black">— {t.name}</footer>
+                    </blockquote>
+                ))}
+            </div>
+        </div>
+    );
+}
