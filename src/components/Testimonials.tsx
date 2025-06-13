@@ -1,7 +1,7 @@
 
 const items = [
-    { quote: "Fantastic detail work!", name: "Alex P." },
-    { quote: "My minis have never looked better.", name: "Jordan L." },
+    { quote: "", name: "" },
+    { quote: "", name: "" },
 ];
 
 export default function Testimonials() {
