@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: Install deps 📦
-        run: npm install
+        run: npm install --save --legacy-peer-deps
 
       - name: Build project 🏗️
         run: npm run build
