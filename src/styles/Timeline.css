@@ -1,0 +1,64 @@
+/* Timeline.css */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 4rem 4rem;
+    height: 90vh;
+    justify-content: space-evenly;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ccc;
+    z-index: 0;
+}
+
+.timeline-milestone {
+    position: relative;
+    padding-left: 40px;
+    z-index: 1;
+}
+
+.timeline-milestone:hover .milestone-dot{
+    background-color: #ffffff;
+
+}
+
+
+.milestone-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    margin-top: 0.25rem;
+}
+
+.milestone-title {
+    font-weight: bold;
+}
+
+.milestone-description {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    color: #bfbfbf;
+    font-size: 0.9rem;
+}
+
+.milestone-description.visible {
+    opacity: 1;
+    max-height: 200px;
+}
