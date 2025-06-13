@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Content Manager</title>
-    <script src="./netlify-cms.js"></script>
+    <meta charset="UTF-8" />
+    <title>CMS Admin</title>
 </head>
 <body>
+<script src="/portfolio/admin/netlify-cms.js"></script>
 <script>
-    CMS.init({
-        config: {
-            backend: { name: 'github', repo: 'Sedarius-1/portfolio', branch: 'main', open_authoring: false },
-            media_folder: 'public/uploads',
-            public_folder: '/uploads',
-            collections: [{
-                name: 'text', label: 'Site Text', folder: 'src/data/text',
-                create: false, fields: [
-                    { name: 'homeHeadline', label: 'Home Headline', widget: 'string' },
-                    { name: 'homeSub', label: 'Home Sub‑Headline', widget: 'text' },
-                    /* …add fields for every chunk of text you want to edit… */
-                ]
-            }]
-        }
+    window.CMS_MANUAL_INIT = true;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        CMS.init({
+            config: {
+                backend: {
+                    name: "github",
+                    repo: "Sedarius-1/portfolio",
+                    branch: "master",
+                },
+                media_folder: "public/uploads",
+                public_folder: "/uploads",
+                collections: [
+                    {
+                        name: "siteText",
+                        label: "Site Text",
+                        folder: "src/data/text",
+                        create: true,
+                        fields: [
+                            { name: "homeHeadline", label: "Home Headline", widget: "string" },
+                            { name: "homeSub", label: "Sub Headline", widget: "text" },
+                        ],
+                    },
+                ],
+            },
+        });
     });
 </script>
 </body>
