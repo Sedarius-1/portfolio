@@ -8,8 +8,6 @@ import Workflow from "./pages/Workflow.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import GAListener from "./components/GAListener";
 import UrgencyBanner from "./components/UrgencyBanner.tsx";
-import BlogPost from "./pages/blog/[slug]";
-import Blog from "./pages/Blog.tsx";
 
 function App() {
     return (
@@ -25,8 +23,6 @@ function App() {
                     <Route path="/workflow" element={<Workflow/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/blog/:slug" element={<BlogPost/>}/>
-                    <Route path="/blog" element={<Blog/>}/>
                 </Routes>
             </main>
             <Footer/>

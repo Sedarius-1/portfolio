@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sedarius-1.github.io/portfolio/sitemap.xml
