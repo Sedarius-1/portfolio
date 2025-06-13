@@ -1,15 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sedarius Art</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-BaRZXd6x.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-CYS_U-6U.css">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Content Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms-app@^2.15.72/dist/netlify-cms.js"></script>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+</head>
+<body>
+<script>
+    CMS.init({
+        config: {
+            backend: { name: 'github', repo: 'Sedarius-1/portfolio', branch: 'main', open_authoring: false },
+            media_folder: 'public/uploads',
+            public_folder: '/uploads',
+            collections: [{
+                name: 'text', label: 'Site Text', folder: 'src/data/text',
+                create: false, fields: [
+                    { name: 'homeHeadline', label: 'Home Headline', widget: 'string' },
+                    { name: 'homeSub', label: 'Home Sub‑Headline', widget: 'text' },
+                    /* …add fields for every chunk of text you want to edit… */
+                ]
+            }]
+        }
+    });
+</script>
+</body>
 </html>
