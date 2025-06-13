@@ -3,6 +3,7 @@ import '../styles/App.css';
 import {Helmet} from "react-helmet";
 import '../index.css';
 import Testimonials from "../components/Testimonials.tsx";
+import text from '../data/text/home.json';
 
 export default function Home() {
     return (
@@ -32,10 +33,10 @@ export default function Home() {
                 <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold text-white">
-                        Museum‑Quality Miniature Commissions
+                        {text.homeHeadline}
                     </h1>
                     <p className="mt-4 text-lg text-gray-200 max-w-xl">
-                        From basecoat to finishing touches—bring your armies to life.
+                        {text.homeSub}
                     </p>
                     <a
                         href="contact"
