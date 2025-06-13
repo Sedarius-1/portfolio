@@ -2,10 +2,13 @@ import HeroBg from "../assets/homeBgs/z1.png";
 import '../styles/App.css';
 import {Helmet} from "react-helmet";
 import '../index.css';
+import {useTranslation} from "react-i18next";
 import Testimonials from "../components/Testimonials.tsx";
-import text from '../data/text/home.json';
 
 export default function Home() {
+
+    const { t } = useTranslation();
+
     return (
         <>
             <Helmet>
@@ -33,16 +36,16 @@ export default function Home() {
                 <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold text-white">
-                        {text.homeHeadline}
+                        {t("home.headline")}
                     </h1>
                     <p className="mt-4 text-lg text-gray-200 max-w-xl">
-                        {text.homeSub}
+                        {t("home.subtext")}
                     </p>
                     <a
                         href="contact"
                         className="mt-8 px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-lg text-lg"
                     >
-                        Order Your Commission
+                        {t("home.button")}
                     </a>
                     <Testimonials></Testimonials>
                 </div>

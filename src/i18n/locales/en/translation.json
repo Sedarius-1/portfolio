@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "workflow": "Workflow",
+    "about_me": "About me",
+    "contact": "Contact",
+    "banner": "Free commission slots!"
+  },
+  "home": {
+    "headline": "Professional Miniature Commissions",
+    "subtext": "From basecoat to finishing touches — have your armies brought to life.",
+    "button": "Order Your Commission",
+    "testimonials_headline": "What clients say"
+  },
+  "services": {
+    "level": "Level",
+    "commission": "Commission Pricing",
+    "pricing": "Pricing",
+    "category": "Category",
+    "description": "Description",
+    "price": "Price",
+    "entries": {
+      "tier_1": {
+        "category": "Infantry",
+        "description": "25-32mm based infantry, e.g Space Marines or Beastmen Gors",
+        "price": {
+          "l_1": "2-4 USD",
+          "l_2": "4-8 USD",
+          "l_3": "6-12 USD"
+        }
+      },
+      "tier_2": {
+        "category": "Monstrous Infantry",
+        "price": {
+          "l_1": "2-4 USD",
+          "l_2": "4-8 USD",
+          "l_3": "6-12 USD"
+        },
+        "description": ">32mm based infantry, such as Minotaurs"
+      },
+      "tier_3": {
+        "category": "Characters",
+        "price": {
+          "l_1": "2-4 USD",
+          "l_2": "4-8 USD",
+          "l_3": "6-12 USD"
+        },
+        "description": "Primarchs or Special Characters"
+      },
+      "tier_4": {
+        "category": "Behemoth",
+        "price": {
+          "l_1": "2-4 USD",
+          "l_2": "4-8 USD",
+          "l_3": "6-12 USD"
+        },
+        "description": "Gigantic monsters, such as Carnifex or Cygor"
+      },
+      "tier_5": {
+        "category": "Vehicle",
+        "price": {
+          "l_1": "2-4 USD",
+          "l_2": "4-8 USD",
+          "l_3": "6-12 USD"
+        },
+        "description": "Vehicles, such as Leman Russ or Predator tank"
+      }
+    }
+  }
+}

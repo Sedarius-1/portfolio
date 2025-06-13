@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import bgImage from '../assets/LOGO.png';
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher.tsx";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const { t } = useTranslation();
     return (
         <nav className="relative bg-card px-4 py-3 shadow-md flex items-center justify-between">
             {/* Logo */}
@@ -46,28 +48,28 @@ const Navbar = () => {
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
-                        Home
+                        {t("nav.home")}
                     </Link>
                     <Link
                         to="/pricing"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
-                        Services
+                        {t("nav.services")}
                     </Link>
                     <Link
                         to="/workflow"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
-                        Workflow
+                        {t("nav.workflow")}
                     </Link>
                     <Link
                         to="/about"
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
-                        About me
+                        {t("nav.about_me")}
                     </Link>
                     {/*<Link*/}
                     {/*    to="/blog"*/}
@@ -81,9 +83,10 @@ const Navbar = () => {
                         className="block px-4 py-2 hover:text-primary transition"
                         onClick={() => setIsOpen(false)}
                     >
-                        Contact
+                        {t("nav.contact")}
                     </Link>
                 </div>
+                <LanguageSwitcher/>
             </div>
         </nav>
     );

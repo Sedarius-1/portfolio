@@ -1,3 +1,4 @@
+import {useTranslation} from "react-i18next";
 
 const items = [
     { quote: "", name: "" },
@@ -5,9 +6,14 @@ const items = [
 ];
 
 export default function Testimonials() {
+
+    const { t } = useTranslation();
+
     return (
         <div className="container my-12">
-            <h2 className="text-2xl font-semibold mb-4">What Clients Say</h2>
+            <h2 className="text-2xl font-semibold mb-4">
+                {t("home.testimonials_headline")}
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
                 {items.map((t, i) => (
                     <blockquote key={i} className="p-4 bg-gray-100 rounded-lg">

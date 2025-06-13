@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "workflow": "Przebieg pracy",
+    "about_me": "O mnie",
+    "contact": "Kontakt",
+    "banner": "Zamówienia otwarte!"
+  },
+  "home": {
+    "headline": "Profesjonalne malowanie modeli na zamówienie",
+    "subtext": "Od pierwszej warstwy do końcowych szlifów - niech Twoje armie ożyją na polu walki!",
+    "button":"Złóż zamówienie",
+    "testimonials_headline":"Opinie klientów"
+  },
+  "services": {
+    "level": "Poziom",
+    "commission": "Wycena zamówień",
+    "pricing": "Cennik",
+    "category": "Kategoria",
+    "description": "Opis",
+    "price": "Cena"
+  }
+}
