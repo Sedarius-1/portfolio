@@ -24,6 +24,8 @@ jobs:
 
       - name: Build project 🏗️
         run: npm run build
+        env:
+          VITE_GA_ID: ${{ secrets.VITE_GA_ID }}  
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
